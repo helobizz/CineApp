@@ -22,8 +22,9 @@ export function Botao({ titulo, onPress }: BotaoProps) {
 const styles = StyleSheet.create({
     button: {
         padding: 12,
-        backgroundColor: '#B8A4D8',
+        backgroundColor: '#a4a7d8',
         borderRadius: 5,
+        alignItems: 'center',
         margin: 30,
     },
     buttonPressed: {

@@ -1,4 +1,4 @@
-import { ScrollView, View, Text } from "react-native";
+import { ScrollView, View, StyleSheet } from "react-native";
 import { FilmeCard } from "@/components/FilmeCard";
 import { Botao } from "@/components/Botao";
 import { useRouter } from "expo-router";
@@ -65,7 +65,7 @@ export default function Catalogo() {
     }, []);
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.container}>
             <View
                 style={{
                     flexDirection: 'row',
@@ -75,6 +75,7 @@ export default function Catalogo() {
             >
                 {filmes.map((filme) => (
                     <FilmeCard 
+                        key={filme.titulo}
                         titulo={filme.titulo} 
                         imagem={filme.imagem}
                         genero={filme.genero}
@@ -91,3 +92,9 @@ export default function Catalogo() {
         </ScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#f3e9f6'
+    },
+})

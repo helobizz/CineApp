@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { usePathname, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 
 type FilmeCardProps = {
   titulo: string;
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     height: 280,
     padding: 9,
     borderRadius: 10,
-    backgroundColor: "#d6ccf4",
+    backgroundColor: "#ceccf4",
     margin: 10,
   },
   image: {

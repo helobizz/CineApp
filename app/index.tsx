@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: "#f3e9f6"
+        backgroundColor: "#f3e9f6",
     },
     logo: {
         width: 200,
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     },
     description: {
         fontSize: 18,
+        fontWeight: '600',
         textAlign: 'center',
     }
 });
