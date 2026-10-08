@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { usePathname, useRouter } from "expo-router";
 
 type FilmeCardProps = {
   titulo: string;
@@ -17,6 +18,7 @@ export function FilmeCard({
   favorito,
 }: FilmeCardProps) {
   const [favoritoAtual, setFavoritoAtual] = useState(favorito);
+  const router = useRouter();
 
   return (
       <View style={styles.card}>
@@ -40,6 +42,25 @@ export function FilmeCard({
               {favoritoAtual ? "★ Favorito" : "☆ Favoritar"}
             </Text>
           </Pressable>
+
+          <Pressable
+            onPress={() => 
+              router.push({
+              pathname: "/detalhes",
+              params: { 
+                titulo,
+                genero,
+                ano: ano.toString(),
+              }
+            })
+          }
+          style={({ pressed }) => [
+            styles.detailsButton,
+            pressed && styles.detailsButtonPressed,
+          ]}
+          >
+            <Text style={styles.info}>Ver detalhes</Text>
+          </Pressable>
         </View>
       </View>
   );
@@ -48,7 +69,7 @@ export function FilmeCard({
 const styles = StyleSheet.create({
   card: {
     width: 170,
-    height: 250,
+    height: 280,
     padding: 9,
     borderRadius: 10,
     backgroundColor: "#d6ccf4",
@@ -78,13 +99,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: "left",
     fontWeight: '600',
-    marginBottom: 2,
+    marginBottom: 4,
   },
   favoriteButton: {
     marginTop: 8,
     marginBottom: 0
   },
   favoriteButtonPressed: {
+    opacity: 0.5,
+  },
+  detailsButton: {
+    marginTop: 8,
+  },
+  detailsButtonPressed: {
     opacity: 0.5,
   }
 });

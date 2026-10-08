@@ -1,5 +1,8 @@
 import { ScrollView, View, Text } from "react-native";
 import { FilmeCard } from "@/components/FilmeCard";
+import { Botao } from "@/components/Botao";
+import { useRouter } from "expo-router";
+import { useEffect } from "react";
 
 type Filme = {
     titulo: string;
@@ -55,6 +58,12 @@ const filmes: Filme[] = [
 ];
 
 export default function Catalogo() {
+    const router = useRouter();
+
+    useEffect(() => {
+        console.log("Catálogo carregado");
+    }, []);
+
     return (
         <ScrollView>
             <View
@@ -74,6 +83,11 @@ export default function Catalogo() {
                     />
                 ))}
             </View>
+
+            <Botao 
+                titulo="Sobre"
+                onPress={() => router.push('/sobre')}
+            />
         </ScrollView>
     );
 }
