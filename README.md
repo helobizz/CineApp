@@ -83,7 +83,7 @@ CineApp/
 ## Screenshots
 
 ### Tela inicial
-![alt text](screenshorts/image.png)
+![alt text](screenshots/image.png)
 
 ### Catálogo
 ![alt text](screenshots/image-1.png)
