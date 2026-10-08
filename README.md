@@ -1,50 +1,98 @@
-# Welcome to your Expo app 👋
+# CineApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Aluno
 
-## Get started
+- **Nome:** Heloísa Vale dos Santos
+- **RA:** 2991392513006
 
-1. Install dependencies
+## Aplicativo
 
-   ```bash
-   npm install
-   ```
+**Nome:** CineApp
 
-2. Start the app
+### Descrição
 
-   ```bash
-   npx expo start
-   ```
+O CineApp é um aplicativo mobile desenvolvido em React Native com Expo para apresentar um catálogo de filmes.
 
-In the output, you'll find options to open the app in a
+O aplicativo permite visualizar filmes, consultar informações sobre cada filme, marcar filmes como favoritos e navegar entre as telas de início, catálogo, detalhes e sobre.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Funcionalidades
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Tela inicial com logo, nome e descrição do aplicativo;
+- Catálogo com 6 filmes;
+- Cards reutilizáveis para os filmes;
+- Informações de título, gênero e ano;
+- Sistema de favoritos;
+- Tela de detalhes do filme;
+- Tela Sobre;
+- Navegação entre as telas;
+- Feedback visual ao pressionar os botões.
 
-## Get a fresh project
+## Tecnologias utilizadas
 
-When you're ready, run:
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+
+## Como executar o projeto
+
+### 1. Instalar as dependências
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Iniciar o projeto
 
-## Learn more
+```bash
+npm expo start
+```
+Após iniciar o projeto, o aplicativo pode ser executado utilizando o ambiente disponibilizado pelo Expo ou por um Emulador.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Estrutura do projeto
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```text
+CineApp/
+├── app/
+│   ├── _layout.tsx
+│   ├── index.tsx
+│   ├── catalogo.tsx
+│   ├── detalhes.tsx
+│   └── sobre.tsx
+│
+├── components/
+│   ├── FilmeCard.tsx
+│   └── Botao.tsx
+│
+├── assets/
+│   └── images/
+│       ├── cineapp-logo.png
+│       ├── totoro.webp
+│       ├── kiki.jpg
+│       ├── chihiro.jpg
+│       ├── castelo-animado.webp
+│       ├── ponyo.jpg
+│       └── castelo-ceu.webp
+│
+├── README.md
+├── app.json
+├── package.json
+└── tsconfig.json
+```
 
-## Join the community
+## Screenshots
 
-Join our community of developers creating universal apps.
+### Tela inicial
+![alt text](screenshorts/image.png)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Catálogo
+![alt text](screenshots/image-1.png)
+
+### Filme favorito
+![alt text](screenshots/image-2.png)
+
+### Detalhes
+![alt text](screenshots/image-3.png)
+
+### Sobre
+![alt text](screenshots/image-4.png)
