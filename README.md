@@ -83,16 +83,16 @@ CineApp/
 ## Screenshots
 
 ### Tela inicial
-![alt text](screenshots/image.png)
+![alt text](screenshots/index.png)
 
 ### Catálogo
-![alt text](screenshots/image-1.png)
+![alt text](screenshots/catalogo.png)
 
 ### Filme favorito
-![alt text](screenshots/image-2.png)
+![alt text](screenshots/favoritos.png)
 
 ### Detalhes
-![alt text](screenshots/image-3.png)
+![alt text](screenshots/detalhes.png)
 
 ### Sobre
-![alt text](screenshots/image-4.png)
+![alt text](screenshots/sobre.png)

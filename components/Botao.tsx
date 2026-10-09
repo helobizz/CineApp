@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         alignItems: 'center',
         margin: 30,
+        marginHorizontal: 40
     },
     buttonPressed: {
         opacity: 0.6,
